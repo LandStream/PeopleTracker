@@ -1,0 +1,42 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+<title>People Tracker v0.1</title> 
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" /> 
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="scripts/RPC.js"></script>
+<script type="text/javascript" src="scripts/PeopleTracker.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script> 
+
+<style> 
+
+	#feedback { font-size: 1.4em; }
+	
+	#user_list .ui-selecting { background: #FECA40; }
+	#user_list .ui-selected { background: #F39814; color: white; }
+	#user_list { list-style-type: none; margin: 0; padding: 0; width: 100%; border: solid 2px black; }
+	#user_list li { margin: 2px; padding: 0.4em; font-size: 1.4em; height: 8px; border: dotted 1px grey; }
+</style> 
+
+
+</head> 
+<body onload="initialize()"> 
+  <div> 
+    <input id="address" type="textbox" value=""> 
+    <input type="button" value="Geocode" onclick="codeAddress()"> 
+    
+    <ol id="user_list">
+    </ol>
+  </div> 
+<div id="map_canvas" style="height:90%;top:30px"></div> 
+
+ 
+
+ 
+
+</body> 
+</html> 
